@@ -4,7 +4,8 @@ import Queen from './Queen';
 import { Link } from 'react-router-dom';
 
 const QueenList = () => {
-  const queens = useQueens();
+  const { queens, loading } = useQueens();
+  if(loading) return <h1>Loading...</h1>;
 
   const queenElements = queens.map((queen) => (
     <li key={queen.id}>
