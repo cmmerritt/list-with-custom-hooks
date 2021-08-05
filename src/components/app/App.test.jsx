@@ -15,4 +15,17 @@ describe('App component', () => {
 
     expect(ul).not.toBeEmptyDOMElement();
   });
+
+  it('displays a queen\'s detail page', async () => {
+    render(
+      <MemoryRouter initialEntries={['/2']}>
+        <App />
+      </MemoryRouter>
+    );
+
+    screen.getByText('Loading...');
+    await screen.findByText('Tammie Brown');
+    await screen.findByAltText('Tammie Brown');
+    await screen.findByText('"I can get jiggy, I can get jiggy and wiggy!"');
+  });
 });
