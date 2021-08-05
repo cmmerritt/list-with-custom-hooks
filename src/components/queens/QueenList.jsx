@@ -1,4 +1,5 @@
 import React from 'react';
+import { useQueens } from '../../state/queen';
 import Queen from './Queen';
 
 const QueenList = () => {
