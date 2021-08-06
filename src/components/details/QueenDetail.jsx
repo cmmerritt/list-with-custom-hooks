@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQueen } from '../../state/queen';
-import {  useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const QueenDetail = () => {
   const { id } = useParams();
@@ -19,7 +19,7 @@ const QueenDetail = () => {
           <img src={queen.image} alt={queen.name} />
         </dd>
 
-        <dt>Words of Wisdom</dt>
+        <dt>Words of Wisdom: </dt>
         <dd>{queen.quote}</dd>
       </dl>
     </section>

@@ -6,6 +6,7 @@ import QueenDetail from '../details/QueenDetail';
 
 export default function App() {
   return (
+    // remove Router here and move to App??
     <Router>
       <Header />
       <Switch>
